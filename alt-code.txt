@@ -1,0 +1,398 @@
+capabilities = {
+				workspace = {
+					applyEdit = true,
+					workspaceEdit = {
+						documentChanges = true,
+						resourceOperations = { 'create', 'delete', 'rename' },
+						failureHandling = 'abort',
+						normalizesLineEndings = true
+					},
+					didChangeConfiguration = { },
+					didChangeWatchedFiles = { },
+					symbol = {
+						symbolKind = {
+							valueSet = { 13, 8, 7, 12, 5, 10, 22, 14 }
+						}
+					},
+					fileOperations = {
+						didCreate = true,
+						didRename = true,
+						didDelete = true
+					},
+					workspaceFolders = true,
+					configuration = true
+				},
+				textDocument = {
+					synchronization = {
+						willSave = true,
+						didSave = true
+					},
+					completion = {
+						completionItem = {
+							snippetSupport = true,
+							commitCharactersSupport = true,
+							documentationFormat = { 'markdown', 'plaintext' },
+							deprecatedSupport = true,
+							preselectSupport = true,
+							insertReplaceSupport = true,
+							resolveSupport = {
+								properties = { 'documentation' }
+							}
+						}
+					},
+					hover = {
+						contentFormat = { 'markdown', 'plaintext' }
+					},
+					documentHighlight = { },
+					documentSymbol = {
+						hierarchicalDocumentSymbolSupport = true,
+						labelSupport = true
+					},
+					formatting = { },
+					definition = {
+						linkSupport = true
+					},
+					codeAction = {
+						codeActionLiteralSupport = {
+							codeActionKind = {
+								valueSet = { 'quickfix', 'refactor' }
+							}
+						},
+						isPreferredSupport = true,
+						dataSupport = true,
+						resolveSupport = {
+							properties = { 'edit', 'command' }
+						},
+						honorsChangeAnnotations = true
+					},
+					rename = { },
+					typeDefinition = {
+						linkSupport = true
+					},
+					implementation = {
+						linkSupport = true
+					},
+					foldingRange = {
+						lineFoldingOnly = true
+					},
+					publishDiagnostics = {
+						relatedInformation = true,
+						codeDescriptionSupport = true
+					},
+					semanticTokens = {
+						requests = {
+							range = { },
+							full = {
+								delta = true
+							}
+						},
+						tokenTypes = { 'comment', 'keyword', 'string', 'number', 'regexp', 'operator', 'namespace', 'type', 'struct', 'class', 'interface', 'enum', 'typeParameter', 'function', 'method', 'property', 'macro', 'variable', 'parameter', 'label', 'modifier', 'event', 'enumMember', 'constant' },
+						tokenModifiers = { 'documentation', 'declaration', 'definition', 'static', 'async', 'abstract', 'deprecated', 'readonly', 'modification', 'defaultLibrary', 'global' },
+						formats = { 'relative' },
+						multilineTokenSupport = true
+					},
+					configuration = { },
+					didChangeWatchedFiles = { },
+					workspaceEdit = {
+						documentChanges = true,
+						resourceOperations = { 'create', 'delete', 'rename' },
+						failureHandling = 'abort',
+						normalizesLineEndings = true
+					},
+					symbol = {
+						symbolKind = {
+							valueSet = { 13, 8, 7, 12, 5, 10, 22, 14 }
+						}
+					}
+				},
+				window = {
+					workDoneProgress = true
+				},
+				general = { },
+				experimental = { }
+			}
+			
+			  prefabLibraryPath = 'C:/ProgramData/GameMakerStudio2-Beta/Prefabs'
+
+			  feather = {
+			    enabled = true,
+			    documentParseDelayMs = 250,
+			    compactTooltips = false,
+			    maxStructFieldCount = 5,
+			    refactorAssetNamesOnRename = true,
+			    jsDocStylePreferMultiline = true,
+			    useStrictTypes = false,
+			    highlighting = {
+			      error = {
+							value = 4279045332
+			      },
+			      warning = {
+							value = 4281723112
+			      },
+			      suggestion = {
+							value = 4294099030
+			      }
+			    },
+			    lintRule = {
+			      profile = 2,
+			      gM1000 = 0,
+			      gM1001 = 0,
+			      gM1002 = 0,
+			      gM1003 = 0,
+			      gM1004 = 0,
+			      gM1005 = 0,
+			      gM1006 = 0,
+			      gM1007 = 0,
+			      gM1008 = 0,
+			      gM1009 = 1,
+			      gM1010 = 0,
+			      gM1011 = 1,
+			      gM1012 = 0,
+			      gM1013 = 0,
+			      gM1014 = 0,
+			      gM1015 = 0,
+			      gM1016 = 0,
+			      gM1017 = 1,
+			      gM1019 = 0,
+			      gM1020 = 0,
+			      gM1021 = 0,
+			      gM1022 = 0,
+			      gM1023 = 1,
+			      gM1024 = 1,
+			      gM1025 = 0,
+			      gM1026 = 0,
+			      gM1027 = 0,
+			      gM1028 = 0,
+			      gM1029 = 1,
+			      gM1030 = 0,
+			      gM1031 = 0,
+			      gM1032 = 0,
+			      gM1033 = 1,
+			      gM1034 = 0,
+			      gM1035 = 1,
+			      gM1036 = 0,
+			      gM1037 = 0,
+			      gM1038 = 1,
+			      gM1040 = 0,
+			      gM1041 = 0,
+			      gM1042 = 2,
+			      gM1043 = 1,
+			      gM1044 = 1,
+			      gM1045 = 1,
+			      gM1046 = 0,
+			      gM1048 = 0,
+			      gM1049 = 0,
+			      gM1050 = 0,
+			      gM1051 = 1,
+			      gM1052 = 0,
+			      gM1054 = 0,
+			      gM1055 = 0,
+			      gM1056 = 1,
+			      gM1057 = 0,
+			      gM1058 = 0,
+			      gM1059 = 0,
+			      gM1060 = 1,
+			      gM1062 = 1,
+			      gM1063 = 1,
+			      gM1064 = 0,
+			      gM1065 = 0,
+			      gM1100 = 0,
+			      gM2000 = 1,
+			      gM2001 = 1,
+			      gM2002 = 2,
+			      gM2003 = 1,
+			      gM2004 = 2,
+			      gM2005 = 1,
+			      gM2006 = 1,
+			      gM2007 = 1,
+			      gM2008 = 1,
+			      gM2009 = 1,
+			      gM2010 = 1,
+			      gM2011 = 1,
+			      gM2012 = 1,
+			      gM2013 = 1,
+			      gM2014 = 1,
+			      gM2015 = 1,
+			      gM2016 = 1,
+			      gM2017 = 3,
+			      gM2018 = 1,
+			      gM2019 = 1,
+			      gM2020 = 0,
+			      gM2021 = 0,
+			      gM2022 = 1,
+			      gM2023 = 1,
+			      gM2025 = 1,
+			      gM2026 = 1,
+			      gM2027 = 1,
+			      gM2028 = 1,
+			      gM2029 = 1,
+			      gM2030 = 1,
+			      gM2031 = 1,
+			      gM2032 = 1,
+			      gM2033 = 1,
+			      gM2034 = 1,
+			      gM2035 = 1,
+			      gM2036 = 1,
+			      gM2037 = 1,
+			      gM2038 = 1,
+			      gM2039 = 1,
+			      gM2040 = 1,
+			      gM2041 = 1,
+			      gM2042 = 1,
+			      gM2043 = 1,
+			      gM2044 = 1,
+			      gM2045 = 0,
+			      gM2046 = 1,
+			      gM2047 = 2,
+			      gM2048 = 1,
+			      gM2049 = 1,
+			      gM2050 = 1,
+			      gM2051 = 1,
+			      gM2052 = 1,
+			      gM2053 = 1,
+			      gM2054 = 1,
+			      gM2055 = 1,
+			      gM2056 = 1,
+			      gM2057 = 1,
+			      gM2058 = 1,
+			      gM2059 = 1,
+			      gM2060 = 1,
+			      gM2061 = 2,
+			      gM2062 = 1,
+			      gM2063 = 1,
+			      gM2064 = 1
+			    },
+			    namingRule = {
+			      gM2017HelpLabel = false,
+			      blocklist = '',
+			      instanceVariable = {
+							style = 4,
+							prefix = '',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      localVariable = {
+							style = 4,
+							prefix = '_',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      paramVariable = {
+							style = 4,
+							prefix = '_',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      enum = {
+							style = 3,
+							prefix = '',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      enumMember = {
+							style = 3,
+							prefix = '',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      macro = {
+							style = 3,
+							prefix = '',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      -- function = {
+							-- style = 4,
+							-- prefix = '',
+							-- suffix = '',
+							-- preserveUnderscores = false
+			      -- },
+			      constructorFunction = {
+							style = 1,
+							prefix = '',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      animationCurve = {
+							style = 4,
+							prefix = 'ac_',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      sprite = {
+							style = 4,
+							prefix = 's',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      tileSet = {
+							style = 4,
+							prefix = 'ts',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      sound = {
+							style = 4,
+							prefix = 'snd',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      path = {
+							style = 4,
+							prefix = 'pth',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      script = {
+							style = 1,
+							prefix = 'scr',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      shader = {
+							style = 4,
+							prefix = 'shd',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      font = {
+							style = 4,
+							prefix = 'fnt',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      timeline = {
+							style = 4,
+							prefix = 'timeLine',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      object = {
+							style = 4,
+							prefix = 'o',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      room = {
+							style = 4,
+							prefix = 'rm',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      sequence = {
+							style = 4,
+							prefix = 'seq',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			      otherResource = {
+							style = 0,
+							prefix = '',
+							suffix = '',
+							preserveUnderscores = false
+			      },
+			    }
+			  }
+
+
+			modules = { 'operagx', 'operagx.build_module', 'test' },	
