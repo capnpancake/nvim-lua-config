@@ -80,24 +80,24 @@ vim.api.nvim_create_autocmd('filetype', {
 })
 
 -- java lsp --
-require('jdtls').start_or_attach({
-	cmd = { 'java',
-		'-Declipse.application=org.eclipse.jdt.ls.core.id1',
-		'-Dosgi.bundles.defaultStartLevel=4',
-		'-Declipse.product=org.eclipse.jdt.ls.core.product',
-		'-Dlog.protocol=true',
-		'-Dlog.level=ALL',
-		'-Xmx1g',
-		'--add-modules=ALL-SYSTEM',
-		'--add-opens', 'java.base/java.util=ALL-UNNAMED',
-		'--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-		'-jar', 'C:/tools/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar',
-		'-configuration', 'C:/tools/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/config_win',
-		'-data', 'c:/users/pancake/documents/java/workspaces'
-	},
+--require('jdtls').start_or_attach({
+	--cmd = { 'java',
+		--'-Declipse.application=org.eclipse.jdt.ls.core.id1',
+		--'-Dosgi.bundles.defaultStartLevel=4',
+		--'-Declipse.product=org.eclipse.jdt.ls.core.product',
+		--'-Dlog.protocol=true',
+		--'-Dlog.level=ALL',
+		--'-Xmx1g',
+		--'--add-modules=ALL-SYSTEM',
+		--'--add-opens', 'java.base/java.util=ALL-UNNAMED',
+		--'--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+		--'-jar', 'C:/tools/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar',
+		--'-configuration', 'C:/tools/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/config_win',
+		--'-data', 'c:/users/pancake/documents/java/workspaces'
+	--},
 	--cmd = { 'jdtls' },
-	root_dir = vim.fs.root(0, {'mvnw', 'gradlew'}),
-})
+	--root_dir = vim.fs.root(0, {'mvnw', 'gradlew'}),
+--})
 
 -- gml lsp --
 vim.api.nvim_create_autocmd('filetype', {
@@ -108,39 +108,40 @@ vim.api.nvim_create_autocmd('filetype', {
 		vim.lsp.start({
 			name = "gml-lsp",
 			cmd = { 'GameMakerLanguageServer', },
-			cmd_cwd = 'C:\\Program Files\\GameMaker-Beta',
+			cmd_cwd = "C:\\Program Files\\GameMaker Studio 2", -- \\GameMakerLanguageServer', --.dll
 			autostart = true,
 			filetypes = { 'gml', '.gml', },
-			root_dir = "C:\\GMS2Projects\\bullet-matador", -- vim.fs.dirname(vim.fs.find({"bullet-matador.yyp"}, { upward = true })[1]),
+			root_dir = vim.fs.dirname(vim.fs.find({"*.yyp"}, { upward = true })[1]), -- "C:\\GMS2Projects\\bullet-matador",
 			before_init = function(params, config)
 				params.clientInfo = {
 					name = "Neovim, Version=0.8.3, Culture=neutral, PublicKeyToken=null",
 					version = "0.8.3",
 				}
 				params.initializationOptions = {
-					runtimeDirectory = "C:\\ProgramData/GameMakerStudio2-Beta/Cache/runtimes\\runtime-2024.400.0.562",
-					runtimeVersion = "2024.400.0.562",
+					runtimeDirectory = "C:\\ProgramData\\GameMakerStudio2\\Cache\\runtimes\\runtime-2024.13.1.242",
+					runtimeVersion = "2024.13.1.242",
 					platforms = { "Windows", "HTML5", "android", "operagx", },
 					modules = { "beta", "android", "HTML5", "Windows", "android.build_module", "HTML5.build_module", "Windows.build_module", "ci_build", "operagx", "operagx.build_module", "beta23", },
 					locale = "US",
-					languagePacks = { "C:\\Program Files\\GameMaker-Beta\\Plugins\\IDE_Localisation_English\\english.csv", },
+					languagePacks = { "C:\\Program Files\\GameMaker Studio 2\\Plugins\\english\\english.csv", },
 					language = "English",
-					prefabLibraryPath = "C:\\ProgramData/GameMakerStudio2-Beta/Prefabs"
+					-- prefabLibraryPath = "C:\\ProgramData/GameMakerStudio2-Beta/Prefabs"
+				}
+				params.ConfigurationItems = {
+					runtimeDirectory = "C:\\ProgramData\\GameMakerStudio2\\Cache\\runtimes\\runtime-2024.13.1.242",
+					runtimeVersion = "2024.13.1.242",
+					platforms = { "Windows", "HTML5", "android", "operagx", },
+					modules = { "beta", "android", "HTML5", "Windows", "android.build_module", "HTML5.build_module", "Windows.build_module", "ci_build", "operagx", "operagx.build_module", "beta23", },
+					locale = "US",
+					languagePacks = { "C:\\Program Files\\GameMaker Studio 2\\Plugins\\english\\english.csv", },
+					language = "English",
+					-- prefabLibraryPath = "C:\\ProgramData/GameMakerStudio2-Beta/Prefabs"
 				}
 			end,
 			on_attach = function(client, bufnr)
 				vim.keymap.set("n", "<C-z>", "I//<ESC>")
-			end,
-			--init_options = {
-				--runtimeDirectory = "C:\\ProgramData/GameMakerStudio2-Beta/Cache/runtimes\\runtime-2024.400.0.562",
-				--runtimeVersion = "2024.400.0.562",
-				--platforms = { "Windows", "Mac", "Linux", "HTML5", "android", "ios", "tvos", "operagx", },
-				--modules = { "beta", "android", "ios", "HTML5", "Linux", "Mac", "Windows", "android.build_module", "HTML5.build_module", "ios.build_module", "Linux.build_module", "Mac.build_module", "Windows.build_module", "tvos", "tvos.build_module", "ci_build", "operagx", "operagx.build_module", "beta23", },
-				--locale = "US",
-				--languagePacks = { "C:\\Program Files\\GameMaker-Beta\\Plugins\\IDE_Localisation_English\\english.csv", },
-				--language = "English",
-				--prefabLibraryPath = "C:\\ProgramData/GameMakerStudio2-Beta/Prefabs"
-			--},
+				print("gml lsp attached to buffer " + bufnr)
+			end
 		})
 	end,
 })
